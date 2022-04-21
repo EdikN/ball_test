@@ -16,6 +16,8 @@ public class controller : MonoBehaviour
 
     private void Start()
     {
+        SaveS.Load();
+        Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody>();
         StartCoroutine(timer());
     }
@@ -36,19 +38,20 @@ public class controller : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         finish.SetActive(true);
+        
         if (other.tag == "Respawn")
         {
             finish_text.text = "YOU LOSE";
             time_finish.text = "";
         }
-
+        
         if (other.tag == "Finish")
         {
-            SaveS.Load();
             StaticValues.time.Add(time);
             SaveS.Save();
             finish_text.text = "YOU WIN";
             time_finish.text = "TIME: " + time.ToString() + " S";
         }
+        Destroy(gameObject);
     }
 }

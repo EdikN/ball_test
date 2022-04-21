@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 1505273553}
   - component: {fileID: 1505273552}
   - component: {fileID: 1505273554}
+  - component: {fileID: 1505273555}
   m_Layer: 5
   m_Name: SCROLL
   m_TagString: Untagged
@@ -596,6 +597,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
+--- !u!114 &1505273555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505273549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e8541465155b41318319866cb7d08f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 7295315480624989955, guid: 8d57710b1c4974a27831d410a11142bf, type: 3}
+  parent: {fileID: 2144016274}
 --- !u!1 &1559271250
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +926,7 @@ GameObject:
   - component: {fileID: 1976857444}
   - component: {fileID: 1976857443}
   - component: {fileID: 1976857442}
+  - component: {fileID: 1976857445}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -982,9 +998,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: load, Assembly-CSharp
-        m_MethodName: lvl
+      - m_Target: {fileID: 1976857445}
+        m_TargetAssemblyTypeName: scene_switch, Assembly-CSharp
+        m_MethodName: menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1032,6 +1048,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976857440}
   m_CullTransparentMesh: 1
+--- !u!114 &1976857445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976857440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4fd6f8111a4fe4ab2408bc87c769dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1989705710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1193,6 @@ GameObject:
   - component: {fileID: 2144016274}
   - component: {fileID: 2144016276}
   - component: {fileID: 2144016275}
-  - component: {fileID: 2144016277}
   m_Layer: 5
   m_Name: Score_parent
   m_TagString: Untagged
@@ -1190,7 +1217,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00539398, y: -0.00033569336}
-  m_SizeDelta: {x: 607.51, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2144016275
 MonoBehaviour:
@@ -1204,7 +1231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
+  m_HorizontalFit: 2
   m_VerticalFit: 2
 --- !u!114 &2144016276
 MonoBehaviour:
@@ -1232,18 +1259,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &2144016277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144016273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e8541465155b41318319866cb7d08f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7295315481065348635
 PrefabInstance:
   m_ObjectHideFlags: 0
