@@ -7,8 +7,9 @@ public class controller : MonoBehaviour
     [SerializeField] float Speed;
     [Header("UI")]
     [SerializeField] Text time_text;
-    [SerializeField] GameObject lose;
-    [SerializeField] GameObject win;
+    [SerializeField] GameObject finish;
+    [SerializeField] Text finish_text;
+    [SerializeField] Text time_finish;
     [HideInInspector]
     private Rigidbody rb;
     int time = 0;
@@ -34,15 +35,20 @@ public class controller : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        finish.SetActive(true);
         if (other.tag == "Respawn")
-            lose.SetActive(true);
+        {
+            finish_text.text = "YOU LOSE";
+            time_finish.text = "";
+        }
 
         if (other.tag == "Finish")
         {
             SaveS.Load();
             StaticValues.time.Add(time);
             SaveS.Save();
-            win.SetActive(true);
+            finish_text.text = "YOU WIN";
+            time_finish.text = "TIME: " + time.ToString() + " S";
         }
     }
 }

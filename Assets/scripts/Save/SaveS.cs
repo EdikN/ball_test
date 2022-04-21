@@ -11,7 +11,7 @@ public class SaveS
         JSONObject obj = new JSONObject();
 
         JSONArray arr = new JSONArray();
-        foreach (var time in StaticValues.time)
+        foreach (int time in StaticValues.time)
         {
             arr.Add(time);
         }
